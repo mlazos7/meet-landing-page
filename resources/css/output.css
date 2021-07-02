@@ -10,10 +10,6 @@ body {
   width: 100vw;
 }
 
-h1 {
-  color: #855fb1;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -31,8 +27,22 @@ h1 {
 .pcontent__logo img {
   margin: 0 auto;
 }
+.pcontent__image {
+  margin: 54px 0 48px 0;
+}
 .pcontent__image img {
   width: 100%;
+}
+.pcontent__title {
+  color: #28283d;
+}
+.pcontent__title h1 {
+  font-size: 40px;
+  line-height: 44px;
+}
+.pcontent__subtitle {
+  color: #87879d;
+  margin: 0 24px;
 }
 .pcontent__buttons {
   display: flex;
