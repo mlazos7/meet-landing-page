@@ -1,5 +1,5 @@
 @import "./colors";
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap");
+@import "./typography";
 
 * {
   box-sizing: border-box;
@@ -8,8 +8,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Red Hat Display", sans-serif;
   width: 100vw;
+  text-align: center;
 }
 
 .wrapper {
@@ -19,17 +19,14 @@ body {
   margin: 48px auto 0 auto;
 }
 
-button {
-  font-weight: bold;
+.btn {
   cursor: pointer;
   height: 54px;
-  font-size: 16px;
-  line-height: 26px;
   border: 0;
   border-radius: 50px;
   box-sizing: border-box;
-  color: white;
-  &.primary {
+  color: $white;
+  &--primary {
     padding: 0 40px;
     background-color: $green;
     span {
@@ -40,7 +37,7 @@ button {
       background-color: $green-hover;
     }
   }
-  &.secondary {
+  &--secondary {
     padding: 0 30px;
     background-color: $purple;
     margin-top: 16px;
@@ -55,7 +52,6 @@ button {
 }
 
 .pcontent {
-  text-align: center;
   &__logo {
     display: flex;
     img {
@@ -70,10 +66,6 @@ button {
   }
   &__title {
     color: $dark;
-    h1 {
-      font-size: 40px;
-      line-height: 44px;
-    }
   }
   &__subtitle {
     color: $gray;
@@ -83,7 +75,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // margin-top: 20px;
   }
 }
 .scontent {
@@ -100,28 +91,19 @@ button {
     }
   }
   &__details {
-    text-align: center;
-
     h2 {
       color: $dark;
-      font-size: 32px;
-      line-height: 36px;
-      font-weight: bold;
     }
     .highlight {
       color: $green;
-      font-size: 16px;
       line-height: 26px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      font-weight: bold;
       margin-top: 40px;
+      font-weight: bold;
     }
     p {
       margin: 25px 0 0 0;
-      font-size: 16px;
-      font-weight: normal;
-      line-height: 26px;
       color: $gray;
       padding: 0 28px;
     }
@@ -129,7 +111,6 @@ button {
 }
 .footer {
   margin-top: -89px;
-  text-align: center;
   height: 428px;
   background: $green-gradient, url("./../images/mobile/image-footer.jpg");
   background-size: cover;
@@ -140,9 +121,6 @@ button {
       margin: 0;
       padding: 0;
       color: $white;
-      font-size: 32px;
-      font-weight: bold;
-      line-height: 36px;
     }
   }
 
@@ -150,17 +128,8 @@ button {
     padding-top: 10px;
     p {
       color: $white;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 26px;
       padding: 0 28px;
     }
-  }
-
-  .primary {
-    padding: 0 30px;
-    background-color: $purple;
-    margin-top: 16px;
   }
 }
 
@@ -177,15 +146,10 @@ button {
     border-radius: 50% 50%;
     display: flex;
     align-items: center;
-    justify-items: center;
     margin: 0 auto;
 
-    div {
+    p {
       width: 100%;
-      text-align: center;
-      font-size: 16px;
-      line-height: 26px;
-      font-weight: bold;
     }
   }
 

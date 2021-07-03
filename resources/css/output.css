@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap");
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 26px;
+  font-weight: normal;
+}
+
+button {
+  font-size: 1rem;
+  line-height: 26px;
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,8 +34,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Red Hat Display", sans-serif;
   width: 100vw;
+  text-align: center;
 }
 
 .wrapper {
@@ -17,42 +45,36 @@ body {
   margin: 48px auto 0 auto;
 }
 
-button {
-  font-weight: bold;
+.btn {
   cursor: pointer;
   height: 54px;
-  font-size: 16px;
-  line-height: 26px;
   border: 0;
   border-radius: 50px;
   box-sizing: border-box;
-  color: white;
+  color: #fafafa;
 }
-button.primary {
+.btn--primary {
   padding: 0 40px;
   background-color: #4d96a9;
 }
-button.primary span {
+.btn--primary span {
   color: #8fe3f9;
 }
-button.primary:hover {
+.btn--primary:hover {
   background-color: #71C0D4;
 }
-button.secondary {
+.btn--secondary {
   padding: 0 30px;
   background-color: #855fb1;
   margin-top: 16px;
 }
-button.secondary span {
+.btn--secondary span {
   color: #d9b8ff;
 }
-button.secondary:hover {
+.btn--secondary:hover {
   background-color: #B18BDD;
 }
 
-.pcontent {
-  text-align: center;
-}
 .pcontent__logo {
   display: flex;
 }
@@ -67,10 +89,6 @@ button.secondary:hover {
 }
 .pcontent__title {
   color: #28283d;
-}
-.pcontent__title h1 {
-  font-size: 40px;
-  line-height: 44px;
 }
 .pcontent__subtitle {
   color: #87879d;
@@ -94,36 +112,25 @@ button.secondary:hover {
   border-radius: 10px;
   margin-bottom: 24px;
 }
-.scontent__details {
-  text-align: center;
-}
 .scontent__details h2 {
   color: #28283d;
-  font-size: 32px;
-  line-height: 36px;
-  font-weight: bold;
 }
 .scontent__details .highlight {
   color: #4d96a9;
-  font-size: 16px;
   line-height: 26px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  font-weight: bold;
   margin-top: 40px;
+  font-weight: bold;
 }
 .scontent__details p {
   margin: 25px 0 0 0;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 26px;
   color: #87879d;
   padding: 0 28px;
 }
 
 .footer {
   margin-top: -89px;
-  text-align: center;
   height: 428px;
   background: linear-gradient(rgba(77, 150, 169, 0.85), rgba(77, 150, 169, 0.85)), url("./../images/mobile/image-footer.jpg");
   background-size: cover;
@@ -135,24 +142,13 @@ button.secondary:hover {
   margin: 0;
   padding: 0;
   color: #fafafa;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 36px;
 }
 .footer__subtitle {
   padding-top: 10px;
 }
 .footer__subtitle p {
   color: #fafafa;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 26px;
   padding: 0 28px;
-}
-.footer .primary {
-  padding: 0 30px;
-  background-color: #855fb1;
-  margin-top: 16px;
 }
 
 .separator {
@@ -169,15 +165,10 @@ button.secondary:hover {
   border-radius: 50% 50%;
   display: flex;
   align-items: center;
-  justify-items: center;
   margin: 0 auto;
 }
-.separator__circle div {
+.separator__circle p {
   width: 100%;
-  text-align: center;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: bold;
 }
 .separator__line {
   width: 1px;
