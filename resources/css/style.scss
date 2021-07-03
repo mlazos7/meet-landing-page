@@ -10,16 +10,19 @@ body {
   padding: 0;
   width: 100vw;
   text-align: center;
+  background-color: $body-color;
 }
 
 .wrapper {
+  background-color: $background-color;
   display: flex;
   flex-direction: column;
   width: 375px;
-  margin: 48px auto 0 auto;
+  margin: 0px auto;
+  padding-top: 48px;
 }
 
-button{
+button {
   display: inline;
 }
 
@@ -59,15 +62,16 @@ button{
   }
 }
 
-.pcontent {
-  &__logo {
-    display: flex;
-    img {
-      margin: 0 auto;
-    }
+logo {
+  display: flex;
+  img {
+    margin: 0 auto;
   }
+}
+.pcontent {
+  overflow: hidden;
   &__image {
-    margin: 54px 0 48px 0;
+    margin: 54px -24px 48px -24px;
     img {
       width: 100%;
     }
@@ -99,6 +103,9 @@ button{
     }
   }
   &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
       color: $dark;
     }
@@ -118,13 +125,16 @@ button{
   }
 }
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: -89px;
   height: 428px;
   background: $green-gradient, url("./../images/mobile/image-footer.jpg");
   background-size: cover;
+  padding-top: 92px;
 
   &__title {
-    padding-top: 92px;
     h2 {
       margin: 0;
       padding: 0;
@@ -169,42 +179,100 @@ button{
   }
 }
 
-
-@media screen and (min-width: 768px){
-
-  .wrapper{
+@media screen and (min-width: 768px) {
+  .wrapper {
     width: 768px;
   }
 
-  .pcontent{
-    &__subtitle{
+  .pcontent {
+    &__subtitle {
       width: 50%;
       margin: 0 auto;
-
     }
-    &__buttons{
+    &__buttons {
       flex-direction: row;
       justify-content: center;
     }
   }
 
-  .scontent{
-    &__details{
+  .scontent {
+    &__details {
       width: 80%;
       margin: 0 auto;
     }
   }
 
-  .footer{
-  background: $green-gradient, url("./../images/tablet/image-footer.jpg");
-   &__title{
-    width: 300px;
-    margin: 0 auto;
+  .footer {
+    background: $green-gradient, url("./../images/tablet/image-footer.jpg");
+    &__title {
+      width: 300px;
+    }
+    &__subtitle {
+      width: 540px;
+    }
+  }
+}
 
-   }
-   &__subtitle{
-    width: 540px;
-    margin: 0 auto;
-   }
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: 1440px;
+  }
+
+  .pcontent {
+    position: relative;
+    &__left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 364px;
+      height: 280px;
+      background-image: url("./../images/desktop/image-hero-left.png");
+      background-size: contain;
+    }
+
+    &__right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 364px;
+      height: 280px;
+      background-image: url("./../images/desktop/image-hero-right.png");
+      background-size: contain;
+    }
+    &__image {
+      display: none;
+    }
+    &__subtitle {
+      width: 450px;
+    }
+  }
+
+  .scontent {
+    &__photos {
+      justify-content: center;
+      img {
+        margin: 0 15px;
+      }
+    }
+    &__details {
+      p {
+        width: 500px;
+      }
+    }
+  }
+  .footer {
+    background: $green-gradient, url("./../images/desktop/image-footer.jpg");
+    height: 300px;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    &__title {
+      text-align: left;
+    }
+
+    &__subtitle {
+      text-align: left;
+      width: 350px;
+    }
   }
 }

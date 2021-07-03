@@ -36,13 +36,16 @@ body {
   padding: 0;
   width: 100vw;
   text-align: center;
+  background-color: #f2f2f2;
 }
 
 .wrapper {
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
   width: 375px;
-  margin: 48px auto 0 auto;
+  margin: 0px auto;
+  padding-top: 48px;
 }
 
 button {
@@ -82,14 +85,18 @@ button {
   background-color: #B18BDD;
 }
 
-.pcontent__logo {
+logo {
   display: flex;
 }
-.pcontent__logo img {
+logo img {
   margin: 0 auto;
 }
+
+.pcontent {
+  overflow: hidden;
+}
 .pcontent__image {
-  margin: 54px 0 48px 0;
+  margin: 54px -24px 48px -24px;
 }
 .pcontent__image img {
   width: 100%;
@@ -119,6 +126,11 @@ button {
   border-radius: 10px;
   margin-bottom: 24px;
 }
+.scontent__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .scontent__details h2 {
   color: #28283d;
 }
@@ -137,12 +149,13 @@ button {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: -89px;
   height: 428px;
   background: linear-gradient(rgba(77, 150, 169, 0.85), rgba(77, 150, 169, 0.85)), url("./../images/mobile/image-footer.jpg");
   background-size: cover;
-}
-.footer__title {
   padding-top: 92px;
 }
 .footer__title h2 {
@@ -208,11 +221,66 @@ button {
   }
   .footer__title {
     width: 300px;
-    margin: 0 auto;
   }
   .footer__subtitle {
     width: 540px;
-    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: 1440px;
+  }
+
+  .pcontent {
+    position: relative;
+  }
+  .pcontent__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 364px;
+    height: 280px;
+    background-image: url("./../images/desktop/image-hero-left.png");
+    background-size: contain;
+  }
+  .pcontent__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 364px;
+    height: 280px;
+    background-image: url("./../images/desktop/image-hero-right.png");
+    background-size: contain;
+  }
+  .pcontent__image {
+    display: none;
+  }
+  .pcontent__subtitle {
+    width: 450px;
+  }
+
+  .scontent__photos {
+    justify-content: center;
+  }
+  .scontent__photos img {
+    margin: 0 15px;
+  }
+  .scontent__details p {
+    width: 500px;
+  }
+
+  .footer {
+    background: linear-gradient(rgba(77, 150, 169, 0.85), rgba(77, 150, 169, 0.85)), url("./../images/desktop/image-footer.jpg");
+    height: 300px;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .footer__title {
+    text-align: left;
+  }
+  .footer__subtitle {
+    text-align: left;
+    width: 350px;
   }
 }
 
