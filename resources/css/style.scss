@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 375px;
-  margin: 0 auto;
+  margin: 48px auto 0 auto;
 }
 
 button {
@@ -35,17 +35,26 @@ button {
     span {
       color: $light-blue;
     }
+
+    &:hover {
+      background-color: $green-hover;
+    }
   }
   &.secondary {
     padding: 0 30px;
     background-color: $purple;
     margin-top: 16px;
+    span {
+      color: $light-purple;
+    }
+
+    &:hover {
+      background-color: $purple-hover;
+    }
   }
 }
 
-
 .pcontent {
-  border: 1px solid black;
   text-align: center;
   &__logo {
     display: flex;
@@ -78,7 +87,6 @@ button {
   }
 }
 .scontent {
-  border: 1px solid black;
   &__photos {
     padding: 0 12px;
     display: flex;
@@ -94,13 +102,13 @@ button {
   &__details {
     text-align: center;
 
-    h2{
+    h2 {
       color: $dark;
       font-size: 32px;
       line-height: 36px;
       font-weight: bold;
     }
-    .highlight{
+    .highlight {
       color: $green;
       font-size: 16px;
       line-height: 26px;
@@ -109,10 +117,10 @@ button {
       font-weight: bold;
       margin-top: 40px;
     }
-    p{
+    p {
       margin: 25px 0 0 0;
       font-size: 16px;
-      font-weight:normal;
+      font-weight: normal;
       line-height: 26px;
       color: $gray;
       padding: 0 28px;
@@ -120,19 +128,15 @@ button {
   }
 }
 .footer {
+  margin-top: -89px;
   text-align: center;
-  border: 1px solid black;
   height: 428px;
-  background: $green-gradient,url('./../images/mobile/image-footer.jpg');
+  background: $green-gradient, url("./../images/mobile/image-footer.jpg");
   background-size: cover;
 
-  
-  
-  
-
-  &__title{
+  &__title {
     padding-top: 92px;
-    h2{
+    h2 {
       margin: 0;
       padding: 0;
       color: $white;
@@ -140,22 +144,20 @@ button {
       font-weight: bold;
       line-height: 36px;
     }
-    
   }
 
-  &__subtitle{
+  &__subtitle {
     padding-top: 10px;
-    p{
+    p {
       color: $white;
       font-weight: normal;
       font-size: 18px;
       line-height: 26px;
       padding: 0 28px;
-
     }
   }
 
-  .primary{
+  .primary {
     padding: 0 30px;
     background-color: $purple;
     margin-top: 16px;
@@ -163,12 +165,14 @@ button {
 }
 
 .separator {
+  z-index: 9;
   margin: 64px 0;
   color: $gray;
   &__circle {
     width: 50px;
     height: 50px;
     border: 1px solid;
+    background-color: $white;
     border-color: rgba($gray, 25%);
     border-radius: 50% 50%;
     display: flex;
@@ -187,7 +191,7 @@ button {
 
   &__line {
     width: 1px;
-    background-color: rgba($gray,25%);
+    background-color: rgba($gray, 25%);
     height: 75px;
     margin: 0 auto;
   }
